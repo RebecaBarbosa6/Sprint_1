@@ -1,71 +1,177 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para a página de carregamento */
+body.loading {
+    background-color: whitesmoke;
+}
+
+#animacao-inicial {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#animacao-inicial img {
+    width: 500px;
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+/* Animação de fade out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Estilos do cabeçalho */
+.header {
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.fix-esquerda,
+.fix-direita,
+.fix-esquerdac {
+    position: fixed;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.fix-esquerda {
+    top: 15px;
+    left: 15px;
+    max-width: 100%;
+}
+
+.fix-direita,
+.fix-direitas {
+    top: 15px;
+    gap: 10px;
+    display: flex;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.fix-direita {
+    right: 15px;
+}
+
+.fix-direitas {
+    right: 80px;
+}
+
+/* Estilos de entrada */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Estilos do corpo */
+.body {
+    display: grid;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    padding: 20px;
+    height: 100vh;
 }
 
-.post-container {
-    max-width: 600px;
-    width: 100%;
+/* Estilos do container */
+.container {
+    display: grid;
+    gap: 0px;
 }
 
-#postsSection {
-    margin-top: 20px;
-}
-
+/* Estilos do post */
 .post {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.post-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    margin-bottom: 10px;
+    padding-top: 200px;
 }
 
-.post-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+/* Estilos das imagens */
+.imagem {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-column: 2/3;
+    align-items: center;
 }
 
-.post-header h2 {
-    margin: 0;
-    font-size: 18px;
+.imagens img {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
 }
 
-.post-description {
-    font-size: 14px;
-    margin-top: 10px;
+/* Estilos de interação */
+.interações {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-column: 3;
+    align-items: center;
 }
 
-.post img {
+/* Botões */
+.like,
+.artista,
+.comentario,
+.descrição,
+.pagamento {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Estilos de arte */
+.arte {
+    font-size: 200%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    text-justify: left;
+}
+
+.pe {
+    font-size: 100%;
+    border: 3px solid white;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(185, 185, 185);
+}
+
+/* Estilo de título */
+.BuyArt {
+    font-family: Courier, monospace;
+    font-size: 600%;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-top: 15px;
-    border-radius: 10px;
-}
-
-.post-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.post-footer .likes {
-    font-size: 14px;
-    color: #888;
-}
-
-.post-footer .date {
-    font-size: 12px;
-    color: #aaa;
 }

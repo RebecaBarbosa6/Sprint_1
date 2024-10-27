@@ -1,17 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts de Arte</title>
-    <link rel="stylesheet" href="style.css">
+    <title>BuyArt</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="post-container">
-        <h1>Posts de Arte</h1>
-        <div id="postsSection"></div>
-    </div>
+    <header>
+        <h1>BuyArt</h1>
+        <div class="header-icons">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </header>
 
-    <script src="script.js"></script>
+    <div class="gallery">
+        <!-- Primeira obra de arte -->
+        <div class="art-container">
+            <!-- Aqui está o caminho atualizado para a imagem "Arte Colorida" -->
+            <img src="imagens/arte-colorida.jpg" alt="Arte Colorida" class="art-image">
+            <div class="art-details">
+                <h3>Arte Colorida</h3>
+                <p>Artista Famoso</p>
+                <p class="art-description">Uma obra de arte vibrante e colorida que representa a diversidade.</p>
+                <div class="interaction-icons">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda obra de arte -->
+        <div class="art-container">
+            <!-- Aqui está o caminho atualizado para a imagem "Retrato Abstrato" -->
+            <img src="imagens/retrato-abstrato.jpg" alt="Retrato Abstrato" class="art-image">
+            <div class="art-details">
+                <h3>Retrato Abstrato</h3>
+                <p>Artista Desconhecido</p>
+                <p class="art-description">Um retrato abstrato com formas e cores inusitadas.</p>
+                <div class="interaction-icons">
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

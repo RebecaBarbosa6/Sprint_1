@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Arte Colorida",
+        "artista": "Artista Famoso",
+        "descricao": "Uma obra de arte vibrante e colorida que representa a diversidade.",
+        "imagem": "path/to/your/image1.jpg"
+    },
+    {
+        "nome": "Retrato Abstrato",
+        "artista": "Artista Desconhecido",
+        "descricao": "Um retrato abstrato com formas e cores inusitadas.",
+        "imagem": "path/to/your/image2.jpg"
+    }
+]
